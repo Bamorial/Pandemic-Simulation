@@ -52,7 +52,7 @@ def EpidemicSimulation(population_len, initial_infected=100, day_count=14):
             data.population.append(len(individuals))
 
             buildings = schools + hospitals + shops
-            allBuildings=[]            
+            allBuildings=set()            
             for individual in individuals:
                 print(individual)
                 if len(buildings) == 0:
@@ -62,9 +62,10 @@ def EpidemicSimulation(population_len, initial_infected=100, day_count=14):
                     goToBuilding = buildings[currentIndex]
                     if goToBuilding.currentCapacity < goToBuilding.capacity:
                         goToBuilding.newVisit(individual)
+                        allBuildings.add(goToBuilding)
                         break
                     else:
-                        allBuildings.append(goToBuilding)
+                        allBuildings.add(goToBuilding)
                         buildings.remove(goToBuilding)
                         if len(buildings) == 0:
                             break
