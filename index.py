@@ -7,13 +7,13 @@ from Classes.Day import Day
 from Classes.School import School 
 from Classes.Hospital import Hospital
 from Classes.Shop import Shop 
-from Constants.constants import INFECTION_DURATION, INITIAL_INFECTED, DAY_COUNT, POPULATION_LEN 
+from Constants.constants import INFECTION_DURATION, INITIAL_INFECTED, DAY_COUNT, POPULATION_LEN, NUMBER_OF_BUILDINGS
 
 
 def getCity():
-    schools_arr = [School() for _ in range(2)]
-    hospitals_arr = [Hospital() for _ in range(5)]
-    shops_arr = [Shop() for _ in range(100)]
+    schools_arr = [School() for _ in range(NUMBER_OF_BUILDINGS['school'])]
+    hospitals_arr = [Hospital() for _ in range(NUMBER_OF_BUILDINGS['hospital'])]
+    shops_arr = [Shop() for _ in range(NUMBER_OF_BUILDINGS['shop'])]
     city=schools_arr+hospitals_arr+shops_arr
     return city
 
@@ -104,5 +104,6 @@ def EpidemicSimulation(population_len, initial_infected=100, day_count=14):
         print(f"Day: {day_count} ended")
 
     plot_results(data)
+    city=getCity()
 
 EpidemicSimulation(POPULATION_LEN, INITIAL_INFECTED, DAY_COUNT)
