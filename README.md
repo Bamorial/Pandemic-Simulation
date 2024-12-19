@@ -72,10 +72,11 @@ The simulation outputs daily logs showing the progress of the epidemic, followed
 - **Immune Individuals**: Tracks individuals who have gained immunity.
 
 ## Customization
-You can modify simulation parameters in `Classes/constants.py` to:
+You can modify simulation parameters in `Constants/constants.py` to:
 - Change population size.
 - Adjust infection duration and rate.
 - Modify the number of buildings or their capacities.
+- Adjust the city configuration
 
 ## Visualization
 A graph is generated at the end of the simulation to visualize:
