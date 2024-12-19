@@ -7,13 +7,13 @@ from Classes.Day import Day
 from Classes.School import School 
 from Classes.Hospital import Hospital
 from Classes.Shop import Shop 
-from Classes.constants import INFECTION_DURATION, INFECTION_RATE, INITIAL_INFECTED, DAY_COUNT, POPULATION_LEN 
+from Classes.constants import INFECTION_DURATION, INITIAL_INFECTED, DAY_COUNT, POPULATION_LEN 
 
 
 def getCity():
-    schools_arr = [School() for _ in range(50)]
-    hospitals_arr = [Hospital() for _ in range(0)]
-    shops_arr = [Shop() for _ in range(50)]
+    schools_arr = [School() for _ in range(2)]
+    hospitals_arr = [Hospital() for _ in range(5)]
+    shops_arr = [Shop() for _ in range(100)]
     city=schools_arr+hospitals_arr+shops_arr
     return city
 
@@ -57,7 +57,7 @@ def infect_in_buildings(buildings):
         if building.visitors:
             for visitor in building.visitors:
                 if visitor.isHealthy != 0:
-                    building.InfectRand(INFECTION_RATE)
+                    building.InfectRand()
                     break
 
 def log_day_data(day_count, individuals, data):
