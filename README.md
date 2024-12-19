@@ -62,7 +62,7 @@ Define key simulation parameters in `Classes/constants.py`:
 ## Usage
 Run the simulation using the following command:
 ```bash
-python main.py
+python index.py
 ```
 
 ## Example Output
