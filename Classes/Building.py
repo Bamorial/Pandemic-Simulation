@@ -1,4 +1,5 @@
 import random
+from Classes.constants import INFECTION_DURATION
 class Building:
     def __init__(self):
         self.currentCapacity=0
@@ -13,4 +14,4 @@ class Building:
         for i in range(infectionRate):
             index=random.randrange(0,len(self.visitors))
             if self.visitors[index].isHealthy==0 and self.visitors[index].isImmune==False:
-                self.visitors[index].isHealthy=3
+                self.visitors[index].isHealthy=INFECTION_DURATION
