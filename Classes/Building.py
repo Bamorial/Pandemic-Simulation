@@ -1,5 +1,5 @@
 import random
-from Classes.constants import INFECTION_DURATION, START_RATE, STOP_RATE
+from Constants.constants import INFECTION_DURATION, START_RATE, STOP_RATE
 class Building:
     name='default'
     def __init__(self):

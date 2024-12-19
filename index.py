@@ -7,7 +7,7 @@ from Classes.Day import Day
 from Classes.School import School 
 from Classes.Hospital import Hospital
 from Classes.Shop import Shop 
-from Classes.constants import INFECTION_DURATION, INITIAL_INFECTED, DAY_COUNT, POPULATION_LEN 
+from Constants.constants import INFECTION_DURATION, INITIAL_INFECTED, DAY_COUNT, POPULATION_LEN 
 
 
 def getCity():
