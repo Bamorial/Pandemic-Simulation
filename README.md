@@ -1,4 +1,4 @@
-# Epidemic Simulation
+# Pandemic Simulation
 
 This project simulates the spread of an epidemic in a city over a given number of days. It models interactions between individuals and buildings such as schools, hospitals, and shops, tracking infection, immunity, and overall health within a population.
 
