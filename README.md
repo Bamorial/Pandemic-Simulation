@@ -30,7 +30,7 @@ Classes/
   Hospital.py         # Subclass of Building for hospitals
   Shop.py             # Subclass of Building for shops
   constants.py        # Constants for simulation parameters
-main.py               # Main simulation script
+index.py               # Main simulation script
 ```
 
 ## Constants
